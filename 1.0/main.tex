@@ -1,0 +1,71 @@
+%    This program is free software: you can redistribute it and/or modify
+%    it under the terms of the GNU General Public License as published by
+%    the Free Software Foundation, either version 3 of the License, or
+%    (at your option) any later version.
+%
+%    This program is distributed in the hope that it will be useful,
+%    but WITHOUT ANY WARRANTY; without even the implied warranty of
+%    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%    GNU General Public License for more details.
+%
+%    You should have received a copy of the GNU General Public License
+%    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ 
+%========================================
+%	苏州大学本科生论文LaTeX模板
+%	2010年 05月 29日 星期六 19:47:22 CST
+%	By telive
+%	Email:	tellive@gmail.com
+%========================================
+
+\documentclass[a4paper, 12pt]{article}
+\input{preamble.tex}
+\begin{document}
+
+%================== 封面 =================
+\includepdf{cover.pdf}
+\newpage
+
+%================== 目录 =================
+% A 目录
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+
+%================== 中英文摘要 ============
+% B 中英文摘要、关键词 (从本页开始编页码)
+\pagenumbering{arabic}
+\input{abstract.tex}
+\newpage
+
+%================== 前言  ================
+% C 前言
+\input{preface.tex}
+\newpage
+
+%=================== 论文正文 =============
+% D 论文正文
+\input{mainbody.tex}
+\newpage
+
+%=================== 结论 ===============
+% E 结论
+\input{conclusion.tex}
+\newpage
+
+%==================== 参考文献 ===========
+% F 参考文献
+\input{references.tex}
+\newpage
+
+%==================== 致谢  =============
+% G 致谢
+\input{acknowlegements.tex}
+\newpage
+
+%==================== 附录 ===============
+% H 附录 (符号说明，原始材料等)
+\input{appendix.tex}
+
+\end{document}
+

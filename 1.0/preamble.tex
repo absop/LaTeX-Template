@@ -1,0 +1,107 @@
+%    This program is free software: you can redistribute it and/or modify
+%    it under the terms of the GNU General Public License as published by
+%    the Free Software Foundation, either version 3 of the License, or
+%    (at your option) any later version.
+%
+%    This program is distributed in the hope that it will be useful,
+%    but WITHOUT ANY WARRANTY; without even the implied warranty of
+%    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%    GNU General Public License for more details.
+%
+%    You should have received a copy of the GNU General Public License
+%    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+%========================================
+%	苏州大学论文LaTeX模板
+%	2010年 05月 29日 星期六 19:47:22 CST
+%	By telive
+%	Email:	tellive@gmail.com
+%========================================
+
+%========================================
+%		Packages used in this template
+\usepackage[BoldFont, SlantFont]{xeCJK}			% 中文支持
+\usepackage{pdfpages}		% 插入pdf
+\usepackage{graphicx}		% 图形支持
+\usepackage{epsfig}
+\usepackage{titletoc}
+\usepackage{subfigure, float}
+\usepackage{indentfirst}
+\usepackage{calc}
+\usepackage{amssymb, amsmath}	% 数学符号
+\usepackage{fancybox}		% 方框文字
+\usepackage{wrapfig}		% 图片文字环绕
+\usepackage{fancyhdr}		% 页眉设置
+\usepackage{cite}			% 引用文献
+\usepackage{indentfirst}	% 首行缩进
+\usepackage[colorlinks,linkcolor=blue,citecolor=blue]{hyperref}			% 让 TOC 支持超链接
+\usepackage[top=3.3cm,bottom=2.7cm,left=2.75cm,right=2.75cm]{geometry}  %设置页边距(学校的要求)
+\usepackage{fontspec}
+\usepackage{caption}
+\usepackage{color}
+\usepackage{array}
+\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
+\newcolumntype{C}[1]{>{\PreserveBackslash\centering}p{#1}}
+\newcolumntype{R}[1]{>{\PreserveBackslash\raggedleft}p{#1}}
+\newcolumntype{L}[1]{>{\PreserveBackslash\raggedright}p{#1}}
+
+%========================================
+%		Settings
+\setmainfont{Times New Roman}
+\setCJKmainfont{SimSun}					% 中文默认字体设置为宋体
+\setCJKfamilyfont{Heiti}{SimHei}		% Use \CJKfamily{Heiti} where you need.
+\setCJKfamilyfont{Songti}{SimSun} 		% Use \CJKfamily{Songti} where you need.
+\setCJKfamilyfont{Kaiti}{simkai.ttf} 	% Use \CJKfamily{Kaiti} where you need.
+\setlength{\parindent}{2em}				% 首行缩进，2字符
+\numberwithin{equation}{section}   		%　使公式标号为　3.1　的形式
+
+\newcommand\Heiti{\CJKfamily{Heiti}}
+\newcommand\Songti{\CJKfamily{Songti}}
+\newcommand\Kaiti{\CJKfamily{Kaiti}}
+
+%========================================
+%		Redefine commands
+\renewcommand\abstractname{\Large \bfseries \Songti 摘\ 要}	% 摘要
+\renewcommand{\figurename}{\Songti 图} 					     % 图
+\renewcommand{\tablename}{\Songti 表}           			     % 表
+\renewcommand\refname{\Songti 参考文献}				 	      % 参考文献
+\renewcommand\contentsname{\centerline{\Songti 目录}}	        % 目录居中
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}	%中文日期
+%\renewcommand{\theequation}{\arabic{chapter}-\arabic{equation}}
+
+%========================================
+%		Header Settings
+\pagestyle{fancy}
+
+\titlecontents{section}
+	[3cm]
+	{\CJKfamily{Heiti}}
+	{\contentslabel{2.5em}}
+	{}
+	{\titlerule*[0.5pc]{$\cdot$}\contentspage\hspace*{2cm}}
+\titlecontents{subsection}
+	[4cm]
+	{\normalsize}
+	{\contentslabel{2.5em}}
+	{}
+	{\titlerule*[0.5pc]{$\cdot$}\contentspage\hspace*{2cm}}
+\titlecontents{subsubsection}
+	[5cm]
+	{\normalsize}
+	{\contentslabel{2.5em}}
+	{}
+	{\titlerule*[0.5pc]{$\cdot$}\contentspage\hspace*{2cm}}
+
+\chead{ \footnotesize  \Songti 苏州大学本科生毕业设计（论文）}	% 页眉中部
+\lhead{}		% 页眉左部，设为空
+\rhead{}		% 页眉右部，设为空
+
+%========================================
+%		Caption settings
+
+\DeclareCaptionFont{kaiti}{\Kaiti}
+\DeclareCaptionFont{bfheiti}{\bf\Heiti}
+\captionsetup{font=small, format=plain, labelfont=bfheiti,
+	textfont=kaiti, justification=raggedright,
+	singlelinecheck=false
+}
